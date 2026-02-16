@@ -34,11 +34,4 @@
   equipment:
     belt: ClothingBeltChiefEngineerFilled
 
-- type: loadoutEffectGroup
-  id: ProTsfEngineer
-  effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:RoleTimeRequirement
-      role: JobTsfEngineer
-      time: 54000 # 15hrs
+

@@ -1,0 +1,38 @@
+- type: loadout
+  id: TsfEngiPDA
+  equipment:
+    id: TsfEngiPDA
+
+- type: loadout
+  id: TsfEngiUplink
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ProTsfEngineer
+  equipment:
+    id: BaseSecurityUplinkRadioDeputy
+
+- type: loadoutGroup
+  id: TsfmcEngiUplink
+  name: loadout-group-tsfmc-uplink
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+    - TsfEngiUplink
+
+- type: loadoutGroup
+  id: TsfEngiPDA
+  name: loadout-group-contractor-id
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - TsfEngiPDA
+  fallbacks:
+  - TsfEngiPDA
+
+- type: loadoutEffectGroup
+  id: ProTsfEngineer
+  effects:
+  - !type:JobRequirementLoadoutEffect
+    requirement:
+      !type:RoleTimeRequirement
+      role: JobTsfEngineer
+      time: 54000 # 15hrs
